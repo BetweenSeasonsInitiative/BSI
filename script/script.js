@@ -68,13 +68,8 @@ allLinks.forEach((link) => {
 });
 
 const form = document.getElementById("contact-form");
-// const googleScriptURL =
-//   "https://script.google.com/macros/s/AKfycby4VR17dEtyGesdWWdO6HZShm8Ye_giN3N0jrB35feDBlYtwnUmkpoNBpSMqrQqBuiX/exec";
-// const googleScriptURL =
-//   "https://script.google.com/macros/s/AKfycbxuo3hIxCLYZLh3K4q592_Zs4jd_TRMHgUxG7184HAEE0_K_Ht2nlKfQsCp7UFSDpxsHw/exec";
-
 const googleScriptURL =
-  "https://script.google.com/macros/s/AKfycbyZrncvgN8wE5f-1Fwl3fMHKY5OsI1eBe5NqDnHxgEuiGPaz5oMTrmHz4zIiC95mQ/exec";
+  "https://script.google.com/macros/s/AKfycbygWLvn4HHn3r-VwfdcjkbCn4UfdDlvPczvjogyFVJLopKT046exuLsbcnq_-sAPpE-Xg/exec";
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
