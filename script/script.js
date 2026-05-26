@@ -70,6 +70,8 @@ allLinks.forEach((link) => {
 const googleScriptURL =
   "https://script.google.com/macros/s/AKfycbwjwRFEqFTtCwu_yzvYBG5O-1jxhWIYWFNMDB2p-A1fmUc0akWwerd-4N2_UGfCPvE/exec";
 
+const form = document.getElementById("contact-form");
+
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
