@@ -67,40 +67,31 @@ allLinks.forEach((link) => {
   });
 });
 
-const form = document.getElementById("contact-form");
 const googleScriptURL =
-  "https://script.google.com/macros/s/AKfycbygWLvn4HHn3r-VwfdcjkbCn4UfdDlvPczvjogyFVJLopKT046exuLsbcnq_-sAPpE-Xg/exec";
+  "https://script.google.com/macros/s/AKfycbwjwRFEqFTtCwu_yzvYBG5O-1jxhWIYWFNMDB2p-A1fmUc0akWwerd-4N2_UGfCPvE/exec";
 
 form.addEventListener("submit", async (e) => {
   e.preventDefault();
 
-  const formData = {
+  const data = {
     fullname: form.name.value,
+
     email: form.email.value,
+
     phone: form.phone.value,
+
     country: form.country.value,
+
     message: form.message.value,
   };
 
   await fetch(googleScriptURL, {
     method: "POST",
-    body: JSON.stringify(formData),
+    mode: "no-cors",
+    body: JSON.stringify(data),
   });
 
-  alert("Submitted!");
+  alert("Form submitted!");
+
   form.reset();
 });
-
-// import countries from "https://cdn.jsdelivr.net/npm/world-countries@4.0.0/countries.json";
-
-// const select = document.getElementById("country");
-
-// countries
-//   .map((c) => c.name.common)
-//   .sort()
-//   .forEach((name) => {
-//     const option = document.createElement("option");
-//     option.value = name;
-//     option.textContent = name;
-//     select.appendChild(option);
-//   });
